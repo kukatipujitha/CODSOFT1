@@ -1,0 +1,34 @@
+def simple_chatbot(user_input):
+    user_input = user_input.lower()  # Convert user input to lowercase for easier matching
+
+    if "hello!" in user_input:
+        return "Hello! How can I help you today?"
+
+    elif "who is the chairman of facebook?" in user_input:
+        return "Mark zuckerberg is the CEO of facebook."
+    
+    elif "who is the chairman of titter?" in user_input:
+        return"elon musk is the chair man of ."
+    
+    elif "who is google CEO?" in user_input:
+        return"sundar pichai is the CEO of google ."
+
+    elif "thank you" in user_input:
+        return "You're welcome! If you have more questions, feel free to ask."
+
+    else:
+        return "I'm sorry, I didn't quite understand that. Can you please rephrase?"
+
+# Main loop for interacting with the chatbot
+def main():
+    print("Chatbot: Hi there! Type 'exit' to end the conversation.")
+    while True:
+        user_input = input("You: ")
+        if user_input.lower() == "exit":
+            print("Chatbot: Goodbye!")
+            break
+        response = simple_chatbot(user_input)
+        print("Chatbot:", response)
+
+if __name__== "__main__":
+    main()
